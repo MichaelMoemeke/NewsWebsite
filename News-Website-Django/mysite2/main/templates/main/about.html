@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>The News Crew</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/main/css/about.css?{% now 'U' %}" rel="stylesheet" type="text/css">    
+  </head>
+
+<body id="back">
+   <div class="topnav">
+    <a href="/Home">Home</a>
+    <a href="/politics">Politics</a>
+    <a href="/covid19">COVID-19</a>
+    <a href="/trending">Trending</a>
+    <a href="/internationalStories">International Stories</a>
+    <a href="/independent">Independent Sources</a>
+    <a href="/UkraineConflict">War in Ukraine</a>
+    <a href="/sports">Sports</a>
+    <a href="/about">About</a>
+    <a href="/customFeed">Custom Feed</a>
+    <a href="/logout">Log out</a>
+    <input type="text" placeholder="Search..">
+  </div>
+  
+<header>
+	<div class="banner">
+	<div id="bannerimage">
+</header>	
+
+<div class="about-section">
+  <h1>About News Crew</h1>
+  <p>Promulgating the truth and ensuring that no story      is overlooked.</p>
+    
+  <p>With different information constantly being spread, it can 
+      be difficult to follow what is truly going on in the world.
+      We seek to provide our users with a website affording 
+      general news stories, organized into specific categories 
+      such as politics, conflicts, and updates regarding the ongoing   pandemic. </p>
+  </div>
+
+<h2 style="text-align:center">Our Team </h2>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      {% load static %} <img src="{% static "main/media/Joseph.png" %}" style="width:35%" align="left" />
+      <div class="container">
+        <h2>Joseph Dattolo</h2>
+        <p>Product Owner & Front End Developer</p>
+        <p class = "parag"> Joseph is a freshman studying software engineering at Drexel University with the intent to pursue a role in the defense, intelligence and space industry. He is an army veteran, and his time in the service heightened his interest in international affairs. He cares deeply about people having access to timely, reliable information and allowing them to make their own conclusions.</p>        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      {% load static %} <img src="{% static "main/media/Alla.jpg" %}" style="width:36.6%" align="left" />
+      <div class="container">
+        <h2>Alla Aspis</h2>
+        <p>Front End Developer</p>
+        <p class = "parag">Alla is a sophomore studying Information Systems at Drexel University. She likes to learn new technologies, and feels passionate about piano. In her free time, Alla likes to cook, go to gym, or spend time with family.
+</p> 
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="row">    
+  <div class="column">
+     <div class="card">
+      {% load static %} <img src="{% static "main/media/Ethan.jpg" %}" style="width:38%" align="left" />
+        <div class="container">
+          <h2>Ethan Gibson</h2>
+          <p>Frontend Developer</p>
+          <p class = "parag">Computer Science at Drexel University. When not in school, his time is spent working in the Philadelphia area, going to the gym, and enriching his knowledge in the technology field. While his experience is limited, he is open to trying and learning new concepts.
+</p> 
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      {% load static %} <img src="{% static "main/media/Michael.jpg" %}" style="width:42%" align="left" />
+      <div class="container">
+        <h2>Michael Moemeke</h2>
+        <p>Front End Developer</p>
+        <p class = "parag">Michael is a freshman majoring in Software Engineering at Drexel University. He enjoys spending his free time playing soccer, hanging out with friends and listening to music. He likes to see other people happy, doing whatever makes them happy.
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--feedback form-->
+<div class = "feedback" >
+  <a href = "/feedback">
+    <button class="button button1" > Please Share Your Feedback </button>
+  </a>
+  <div id="contact"> 
+    <p id = "text"> Contact Us
+    <br> Please email us: newscrew@gmail.com</p>
+  </div>  
+</div>     
+

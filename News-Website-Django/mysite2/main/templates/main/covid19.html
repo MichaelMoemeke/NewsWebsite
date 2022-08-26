@@ -1,0 +1,75 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+
+<style> 
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 750px; /* Should be removed. Only for demonstration */
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style>
+
+  <center>
+	  <h1> COVID-19 LATEST</h1>
+
+		
+  </center>
+
+  <<div class="row">
+    <div class="column" style="background-color:#B33F40;"">
+      <center>
+      <h2> CDC UPDATES</h2>
+      </center>
+      <center>
+      <p><!-- start sw-rss-feed code --> 
+      <rssapp-wall id="Db8TaCwiV7BcoJcA"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+<!-- end sw-rss-feed code -->
+      </center>
+      </p>
+      </div>
+
+    <div class="column" style=background-color:#B33F40;">
+      <center>
+      <h2> U.S. New Cases</h2> 
+      </center>
+      <center>
+      <iframe src="https://public.domo.com/cards/azrGr" width="100%" height="100%"></iframe>
+      </center>
+
+    </div>
+    <div class="column" style="background-color:#B33F40;">
+      <center>
+      <h2> U.S. Vaccination</h2> 
+      </center>
+      <center>
+      <iframe src="https://public.domo.com/cards/W6m2W" width="900" height="600"></iframe>
+      </center>
+    </div>
+
+    <div class="column" style="background-color:#B33F40;">
+      <center>
+      <h2> Global Fully Vaccination Rate per 100k</h2> 
+      </center>
+      <center>
+      <iframe src="https://public.domo.com/cards/31O7r" width="900" height="600"></iframe>
+      </center>
+    </div>
+
+
+<div class="footer">
+  <p> &copy; Copyright 2022 - CI 102 project "News Website" </p>
+</div>
+{% endblock %}
+
+
+
+      

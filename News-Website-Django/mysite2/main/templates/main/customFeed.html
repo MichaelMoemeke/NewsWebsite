@@ -1,0 +1,125 @@
+{% block content %} 
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The News Crew</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/main/css/style.css?{% now 'U' %}" rel="stylesheet" type="text/css">    
+</head>
+
+<body>
+    <div class="topnav">
+        {% if user.is_authenticated %}
+            <a href="/index">Home</a>
+            {% if user.title.all %}
+                {% for item in user.title.all %}
+                    {% for i in item.title %}
+                        {% if i == 'international stories' %}
+                            <a href="/internationalStories">{{i}}</a>
+                        {% endif %}
+                        {% if i == 'politics' %}
+                            <a href="/politics">Politics</a>
+                        {% endif %}
+                        {% if i == 'covid-19' %}
+                            <a href="/covid19">Covid-19</a>
+                        {% endif %}
+                        {% if i == 'trending' %}
+                            <a href="/trending">Trending</a>
+                        {% endif %}
+                        {% if i == 'war in ukraine' %}
+                            <a href="/UkraineConflict">War in Ukraine</a>
+                        {% endif %}
+                        {% if i == 'independent sources' %}
+                            <a href="/independent">Independent Sources</a>
+                        {% endif %}
+                        {% if i == 'sports' %}
+                            <a href="/sports">Sports</a>
+                        {% endif %}        
+                    {% endfor %}
+                {% endfor %}
+                <a href="/logout">Log out</a>
+            {% else %}
+                <a href="/index">Home</a>
+                <a href="/politics">Politics</a>   
+                <a href="/covid19">COVID-19</a>
+                <a href="/trending">Trending</a>
+                <a href="/internationalStories">International Stories</a>
+                <a href="/independent">Independent Sources</a>
+                <a href="/UkraineConflict">War in Ukraine</a>
+                <a href="/sports">Sports</a>
+                <a href="/about">About</a>
+                <a href="/customFeed">Custom Feed</a>
+                <a href="/logout">Log out</a>
+            {% endif %}
+        {% else %}
+            <a href="/index">Home</a>
+            <a href="/politics">Politics</a>   
+            <a href="/covid19">COVID-19</a>
+            <a href="/trending">Trending</a>
+            <a href="/internationalStories">International Stories</a>
+            <a href="/independent">Independent Sources</a>
+            <a href="/UkraineConflict">War in Ukraine</a>
+            <a href="/sports">Sports</a>
+            <a href="/about">About</a>
+            <a href="/customFeed">Custom Feed</a>
+            <a href="/register">Register</a>
+            <a href = "/login">Login</a>
+        {% endif %}
+        <input type="text" placeholder="Search..">
+    </div>
+      
+        <header>
+            <div class="banner">
+            <div id="bannerimage">
+        </header>	
+        <center>
+            {% if user.is_authenticated %}
+            <p>You can access your preferences now!</p>
+            <p><a href="/preferences">CLICK HERE</a> if you haven't selected or if you want to change your preferences!</p>
+            {% else %}
+            <p><h1>YOU MUST REGISTER OR LOGIN TO ACCESS CUSTOMIZABLE PAGE!</h1></p>
+            {% endif %}
+        </center>
+    
+    <!--Code for the three equal comlumns-->
+    <div class="row">
+        <div class="column" style="background-color: #3467eb;">
+            <h2>Left-Leaning Sources</h2>
+            <center>
+            <p><!-- start sw-rss-feed code --> 
+    
+            <rssapp-wall id="GG0JpXa2g5UyU6jw"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+            </center>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <h2>Centrist Sources</h2>
+            <center>
+            <!-- start sw-rss-feed code --> 
+            <rssapp-wall id="x9vGS52hwvBx6x9h"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    
+        <!-- end sw-rss-feed code -->
+        </center>
+        </div>
+        <div class="column" style="background-color:#eb3434;">
+            <h2>Right-Leaning Sources</h2>
+            <center>
+            <p><!-- start sw-rss-feed code --> 
+        <rssapp-wall id="tLSGUmiugN9b9Qct"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+        <!-- end sw-rss-feed code --></p> 
+            </center>
+    
+            </div>
+        </div>
+        
+    <div class="footer">
+        <p> &copy; Copyright 2022 - CI 103 project "News Website" </p>
+    </div>
+          
+          
+</body>
+</html>
+
+
+
+{% endblock %}

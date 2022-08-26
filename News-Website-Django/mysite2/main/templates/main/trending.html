@@ -1,0 +1,35 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+
+<center>
+  <h1> TRENDING TOPICS</h1>
+</center>
+<div class="row">
+<div class="column" style="background-color: #3467eb;">
+  <center>
+    <h2>Left-Leaning Sources</h2>
+    <p><!-- start sw-rss-feed code --> 
+<rssapp-wall id="3fGveNBsC171krcB"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    </p>
+  </center>
+</div>
+<div class="column" style="background-color:#ccc;">
+  <center>
+    <h2>Centrist Sources</h2>
+    <p><!-- start sw-rss-feed code --> 
+  <rssapp-wall id="6vDYUVFRMKXSRuQE"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    </p>
+  </center>
+</div>
+<div class="column" style="background-color:#B33F40;">
+  <center>
+    <h2>Right-Leaning Sources</h2>
+    <p><!-- start sw-rss-feed code --> 
+  <rssapp-wall id="iLS46Pom9grQR4Lk"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    </p>
+  </center>
+</div>
+
+
+{% endblock %}

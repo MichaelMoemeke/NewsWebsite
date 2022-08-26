@@ -1,0 +1,44 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+<style> 
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 650px; 
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style> 
+
+  <center>
+	  <h1> SPORTS</h1>
+  </center>
+<div class="row">
+    <div class="column" style="background-color: #3467eb;">
+      <center>
+      <h2> ESPN </h2>
+        <p> <!-- RSS feed -->
+        <rssapp-wall id="thXTupuq3YguRt90"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+        </p>
+      </center>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <center>
+      <h2> Yahoo Sports </h2>
+      </center>
+      <center> <!-- RSS Feed -->
+        <rssapp-wall id="47xzUkpCnDaQNPLX"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+      </center>
+    </div>
+  </div>
+
+
+{% endblock %}

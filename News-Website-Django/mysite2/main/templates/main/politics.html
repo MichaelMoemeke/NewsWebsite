@@ -1,0 +1,39 @@
+{% extends "main/index.html" %}
+
+{% block content %} 
+
+<center>
+  <h1> Politics</h1>
+</center>
+<div class="row">
+<div class="column" style="background-color: #3467eb;">
+<center>
+  <h2>Left-Leaning Source</h2>
+</center>
+  <center>
+  <p><!-- start sw-rss-feed code --> 
+  <rssapp-wall id="cMSpHAbRSNo0pgh7"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+<!-- end sw-rss-feed code --></p>
+</div>
+<div class="column" style="background-color:#ccc;">
+  <center>
+  <h2>Centrist Sources</h2>
+  </center>
+  <center>
+  <!-- start sw-rss-feed code --> 
+  <rssapp-wall id="mGggRoO5SAzzU4Tj"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+<!-- end sw-rss-feed code -->
+</center>
+</div>
+<div class="column" style="background-color:#eb3434;">
+  <center>
+  <h2>Right-Leaning Sources</h2>
+  </center>
+  <center>
+  <p><!-- start sw-rss-feed code --> 
+  <rssapp-wall id="iY0OTqZ9xF6KkOus"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>  
+<!-- end sw-rss-feed code --></p>
+  </center>
+ </div>
+ 
+{% endblock %}
